@@ -1,0 +1,37 @@
+<h2>All Articles</h2>
+<form action="/articles/add" method="POST">
+    <div class="input-field col s12 l6">
+        <input type="text" id="first_name" class="validate" name="title" required>
+        <label for="first_name">Article Title</label>
+    </div>
+    <div class="input-field col s12 l6">
+        <textarea id="textarea" class="materialize-textarea" name="body" required></textarea>
+        <label for="textarea">Article Body</label>
+    </div>
+    <div class="input-field col s12 l6">
+        <input type="submit" value="Add Article" class="btn btn-info" />
+    </div>
+</form>
+<br /><br />
+<table class="striped centered">
+    <thead>
+        <tr>
+            <th data-field="name">Name</th>
+            <th data-field="artical">Articles</th>
+            <th data-field="action">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% articles.forEach(function(article){ %>
+        <tr>
+            <td>
+                <%= article.title %>
+            </td>
+            <td>
+                <%= article.body %>
+            </td>
+            <td><a href="/articles/edit/<%=article.id %>">Edit</a>&nbsp;|&nbsp;<a href="/articles/delete/<%=article.id %>">Delete</a></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

@@ -1,0 +1,14 @@
+<h2>Update Articles</h2>
+<form action="/articles/update/<%=article.id %>" method="POST">
+    <div class="input-field col s12 l6">
+        <input type="text" id="first_name" class="validate" name="title" required>
+        <label for="first_name">Article Title</label>
+    </div>
+    <div class="input-field col s12 l6">
+        <textarea id="textarea" class="materialize-textarea" name="body" required></textarea>
+        <label for="textarea">Article Body</label>
+    </div>
+    <div class="input-field col s12 l6">
+        <input type="submit" value="Update" class="btn btn-info" />
+    </div>
+</form>
