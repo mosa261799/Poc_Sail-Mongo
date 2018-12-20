@@ -54,6 +54,6 @@ module.exports.datastores = {
   },
   mongodb:{
       adapter: 'sails-mongo',
-      url: 'mongodb://localhost:27017/sailsmongo'
+      url: 'mongodb://Username:Password@cluster0-shard-00-00-zb3ab.mongodb.net:27017,cluster0-shard-00-01-zb3ab.mongodb.net:27017,cluster0-shard-00-02-zb3ab.mongodb.net:27017/sailsmongo?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true',
     } 
 };
